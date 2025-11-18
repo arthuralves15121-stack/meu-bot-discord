@@ -9,7 +9,7 @@ import traceback
 # ======================================================
 #  CONFIGURAÇÃO DO BOT
 # ======================================================
-TOKEN = "SEU_TOKEN_AQUI"  # <-- Substitua pelo seu token aqui
+
 PREFIX = "!"
 
 intents = discord.Intents.all()
@@ -461,6 +461,14 @@ async def top(ctx):
 # ======================================================
 # RODAR BOT
 # ======================================================
+# ======================================================
+# RODAR BOT
+# ======================================================
 import os
 TOKEN = os.getenv("TOKEN")
 
+if not TOKEN:
+    print("❌ ERRO: TOKEN não encontrado na variável do Koyeb")
+else:
+    bot.run(TOKEN)
+    
